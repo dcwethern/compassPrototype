@@ -10,63 +10,53 @@ angular.module('app.routes', [])
     
   
 
-      .state('menu.home', {
-    url: '/page1',
+      .state('tabsController.home', {
+    url: '/page2',
     views: {
-      'side-menu21': {
+      'tab1': {
         templateUrl: 'templates/home.html',
         controller: 'homeCtrl'
       }
     }
   })
 
-  .state('menu.depressionScreeningAlgorthm', {
-    url: '/page2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/depressionScreeningAlgorthm.html',
-        controller: 'depressionScreeningAlgorthmCtrl'
-      }
-    }
-  })
-
-  .state('menu.bipolarDisorderScreening', {
+  .state('tabsController.algorithms', {
     url: '/page3',
     views: {
-      'side-menu21': {
-        templateUrl: 'templates/bipolarDisorderScreening.html',
-        controller: 'bipolarDisorderScreeningCtrl'
+      'tab4': {
+        templateUrl: 'templates/algorithms.html',
+        controller: 'algorithmsCtrl'
       }
     }
   })
 
-  .state('menu.recommendedSteps', {
+  .state('tabsController.references', {
     url: '/page4',
     views: {
-      'side-menu21': {
-        templateUrl: 'templates/recommendedSteps.html',
-        controller: 'recommendedStepsCtrl'
+      'tab3': {
+        templateUrl: 'templates/references.html',
+        controller: 'referencesCtrl'
       }
     }
   })
 
-  .state('menu.antiDepressionTreatment', {
-    url: '/page5',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/antiDepressionTreatment.html',
-        controller: 'antiDepressionTreatmentCtrl'
-      }
-    }
-  })
-
-  .state('menu', {
-    url: '/side-menu21',
-    templateUrl: 'templates/menu.html',
+  .state('tabsController', {
+    url: '/page1',
+    templateUrl: 'templates/tabsController.html',
     abstract:true
   })
 
-$urlRouterProvider.otherwise('/side-menu21/page1')
+  .state('tabsController.pRISMAlgorithm', {
+    url: '/page5',
+    views: {
+      'tab4': {
+        templateUrl: 'templates/pRISMAlgorithm.html',
+        controller: 'pRISMAlgorithmCtrl'
+      }
+    }
+  })
+
+$urlRouterProvider.otherwise('/page1/page2')
 
   
 
